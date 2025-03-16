@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class loginpage {
 
-WebDriver driver= null;	
+WebDriver driver;	
 	
 	By user_name = By.name("user-name");
 	

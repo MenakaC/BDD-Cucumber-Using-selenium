@@ -12,3 +12,14 @@ Feature: Shopping Cart Scenarios
     Examples: 
       | username      | password     |
       | standard_user | secret_sauce |
+
+  Scenario Outline: User adds a product to the cart and proceeds to checkout
+    Given User is on the product listing page
+    When User selects with quantity adds it to the cart
+    Then The product should be added to the cart
+    When User proceeds to checkout
+    Then User should enter the checkout Information <Firstname>,<Lastname> and <Postalcode>
+
+    Examples: 
+      | Firstname | Lastname | Postalcode |
+      | AAA       | BBB      | "5678"     |
